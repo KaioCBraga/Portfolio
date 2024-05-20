@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+header .logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #fff;
+}
+
+header .menu {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+header .menu-line {
+  height: 4px;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+.container .leftside {
+  background-color: #303c4b;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.container .rightside {
+  background-image: url(../img/perfil.png);
+  background-color: #303c4b;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.container .info {
+  color: #fff;
+}
+
+.container .info .profession {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.container .info .name {
+  font-weight: bold;
+  font-size: 80px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.container .info .buttons a {
+  display: inline-block;
+  background-color: #fff;
+  color: #303c4b;
+  padding: 20px 40px;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px #000000ad;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.container .info .buttons a.light {
+  color: #fff;
+  background-color: #303c4b;
+}
+
+.container .info .buttons a:hover {
+  opacity: 0.8;
+}
+
+footer {
+  font-size: 13px;
+  padding: 20px;
+  color: #fff;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@media (max-width: 850px) {
+  header {
+    position: initial;
+    background-color: #303c4b;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .leftside {
+    flex: none;
+    padding: 30px 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  footer {
+    position: initial;
+    color: #fff;
+    font-size: 16px;
+    background-color: #303c4b;
+  }
+}
+
+@media (max-width: 450px) {
+  .container .leftside .info .name {
+    font-size: 50px;
+  }
+
+  .container .leftside .info .buttons a {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
